@@ -1,0 +1,14 @@
+<div class="contenedor-home">
+  <h2>Agregar producto</h2>
+  <app-agregar (agregar)="agregarProductoAlCarrito($event)"></app-agregar>
+
+  <p class="mensaje" *ngIf="aviso()">{{aviso()}}</p>
+
+  <div class="carrito-centro">
+    <button class="btn-carrito" (click)="alternarVisibilidadCarrito()">🛒
+      ({{listaProductos().length}})</button>
+    <div class="carrito-panel" *ngIf="esCarritoVisible()">
+      <app-cart [items]="listaProductos()"></app-cart>
+    </div>
+  </div>
+</div>

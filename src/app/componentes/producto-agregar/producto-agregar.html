@@ -1,0 +1,5 @@
+<form (ngSubmit)="enviar()" #f="ngForm" class="form-agregar">
+    <input type="text" [(ngModel)]="nombre" name="nombre" placeholder="Nombre del producto" required />
+    <button type="submit">Agregar</button>
+  </form>
+  

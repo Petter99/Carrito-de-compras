@@ -1,0 +1,7 @@
+<h4>Carrito</h4>
+<ul *ngIf="items.length; else vacio">
+  <li *ngFor="let p of items; let i = index">{{i+1}}. {{p}}</li>
+</ul>
+<ng-template #vacio>
+  <p>Sin productos</p>
+</ng-template>
